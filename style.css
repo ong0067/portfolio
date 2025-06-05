@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+nav{
+    position: absolute;
+    width: 100%;
+    padding: 20px 0 ;
+    font-family: 'Ubuntu', sans-serif;
+    background: #00c3ff65;
+}
+
+nav .navbar{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navbar .logo a{
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 500;
+    
+}
+
+.navbar .menu{
+    display: flex;
+    position: absolute;
+    z-index: 2000;
+    right: 30px;
+}
+
+.navbar .menu li{
+    list-style: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-size: 500;
+    color: #0e2431;
+}
+
+
+.navbar .menu li a{
+    color: #ffffff;
+    font-size: 20px;
+    font-size: 500;
+}
+.navbar .menu li a:hover{
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    height: 60px;
+    background: #00c3ff65;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/*side navgation menu button*/
+nav .menu-btn,
+.navbar .cancel-btn{
+    position: absolute;
+    color: #ffffff;
+    font-size: 20px;
+    right: 30px;
+    top: 20px;
+    display: none;
+}
+nav .menu-btn{
+    color: #000000;
+    
+}
+
+body.dark-mode {
+    background: #181818;
+    color: #f5f5f5;
+}
+
+body.dark-mode nav,
+body.dark-mode .navbar,
+body.dark-mode footer {
+    background: #222831 !important;
+}
+
+body.dark-mode .box {
+    background: #333 !important;
+    color: #f5f5f5;
+    border-color: #444;
+}
+
+body.dark-mode .tittle {
+    color: #fff;
+}
+
+
+ /*home section css*/
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background: url("image/home.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px; /* 避开导航栏 */
+}
+
+
+ 
+
+/* 首页内容布局 */
+.home-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 48px 32px;
+}
+
+body.dark-mode .home-content {
+    background: rgba(34, 40, 49, 0.92);
+    color: #f5f5f5;
+}
+
+/* 文字部分 */
+.home-content .text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.home-content .text h1 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin-bottom: 0;
+}
+
+.home-content .text h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0;
+}
+
+body.dark-mode .home-content .text h2 {
+    color: #fff;
+}
+
+.home-content .text h3 {
+    font-size: 1.3rem;
+    color: #444;
+    margin-bottom: 0;
+}
+
+body.dark-mode .home-content .text h3 {
+    color: #ccc;
+}
+
+.home-content .text h4 {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 400;
+}
+
+body.dark-mode .home-content .text h4 {
+    color: #aaa;
+}
+
+/* 图片部分 */
+.home-image {
+    flex: 0 0 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-image img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #00bcd4;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    background: #fff;
+    transition: border 0.3s;
+}
+
+body.dark-mode .home-image img {
+    border: 6px solid #fff;
+    background: #232931;
+}
+
+/*about section css*/
+.about {
+    width: 100%;
+    min-height: 100vh;
+    background: url("image/about.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0 40px 0;
+}
+
+.about-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    width: 90%;
+    max-width: 1100px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 48px 32px;
+}
+
+body.dark-mode .about-details {
+    background: rgba(34, 40, 49, 0.95);
+    color: #f5f5f5;
+}
+
+/* 图片部分 */
+.about-details .right {
+    flex: 0 0 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-details .right img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 6px solid #00bcd4;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    background: #fff;
+    transition: border 0.3s;
+}
+
+body.dark-mode .about-details .right img {
+    border: 6px solid #fff;
+    background: #232931;
+}
+
+/* 文字部分 */
+.about-details .left {
+    flex: 1;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-details .left h1 {
+    font-size: 2.2rem;
+    color: #00bcd4;
+    margin-bottom: 18px;
+}
+
+.about-details .left p {
+    font-size: 1.15rem;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+body.dark-mode .about-details .left p {
+    color: #f5f5f5;
+}
+
+
+/*project section css*/
+ .projects {
+    width: 100%;
+    min-height: 100vh;
+    background: url("image/project.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 80px 0 40px 0;
+    
+}
+
+.projects-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.tittle {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #00bcd4;
+    margin-bottom: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+body.dark-mode .tittle {
+    color: #fff;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 24px 28px;
+    width: 500px;
+    max-width: 98vw;
+    min-height: 180px;
+    gap: 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 16px 40px rgba(0,188,212,0.18);
+}
+
+.box img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid #00bcd4;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    flex-shrink: 0;
+}
+
+.box h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    color: #00bcd4;
+}
+
+body.dark-mode .box {
+    background: #232931;
+    color: #f5f5f5;
+    border-color: #444;
+}
+
+body.dark-mode .box h3 {
+    color: #fff;
+}
+
+.box p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+body.dark-mode .box p {
+    color: #f5f5f5;
+}
+
+/*contact section css*/
+/* 联系方式整体布局 */
+.contact {
+    width: 100%;
+    min-height: 120vh;
+    background: url("image/contact.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.contact-content {
+    background: rgba(255,255,255,0.92);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    padding: 40px 32px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 120px;
+}
+
+body.dark-mode .contact-content {
+    background: rgba(34, 40, 49, 0.95);
+    color: #f5f5f5;
+}
+
+.contact-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    color: #00bcd4;
+    text-align: center;
+}
+
+.contact-header p {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+body.dark-mode .contact-header p {
+    color: #ccc;
+}
+
+/* 表单样式 */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+form label {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: border 0.2s;
+}
+
+form input:focus,
+form textarea:focus {
+    border: 1.5px solid #00bcd4;
+    outline: none;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+    background: #232931;
+    color: #f5f5f5;
+    border: 1px solid #444;
+}
+
+button[type="submit"] {
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #0097a7;
+}
+
+/* 社交按钮 */
+.contact-socials {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.contact-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    color: #333;
+    font-size: 1.3rem;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+}
+
+.contact-socials a:hover {
+    background: #00bcd4;
+    color: #fff;
+}
+
+body.dark-mode .contact-socials a {
+    background: #232931;
+    color: #f5f5f5;
+}
+
+body.dark-mode .contact-socials a:hover {
+    background: #00bcd4;
+    color: #fff;
+}
+
+/* 其他联系方式 */
+.contact-info {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.contact-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #00bcd4;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    margin-bottom: 6px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+}
+
+.contact-info i {
+    color: #00bcd4;
+}
+
+body.dark-mode .contact-info li {
+    color: #f5f5f5;
+}
+
+body.dark-mode .contact-info i {
+    color: #00bcd4;
+}
+
+/* 响应式 */
+@media (max-width: 700px) {
+    .contact-content {
+        padding: 18px 6px;
+        max-width: 98vw;
+    }
+}
+
+
+
+@media (max-width: 750px){
+    
+    
+    .navbar .menu{
+        position: absolute;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        max-width: 400px;
+        width: 100%;
+        background: #024b55;
+        padding-top: 80px;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+    
+    .navbar.active .menu {
+        left: 0;
+    }
+    
+
+    .navbar .menu li a{
+    display: block;
+    color: #ffffff;
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: 500;   
+    }
+    
+
+    nav .menu-btn,
+    .navbar .cancel-btn{
+        display: block;
+    }
+
+ /*home section css*/
+.home-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 10px;
+        gap: 24px;
+    }
+    .home-image {
+        margin-top: 18px;
+    }
+
+
+
+    /*about section css*/
+     .about-details {
+        flex-direction: column;
+        gap: 28px;
+        padding: 28px 8px;
+    }
+    .about-details .right {
+        margin-bottom: 12px;
+    }
+
+
+    /*projects section css*/    
+
+
+
+
+
+     /*contact section css*/
+    .contact-content {
+        padding: 18px 6px;
+        max-width: 98vw;
+    }
+
+
+
+
+    
+
+}

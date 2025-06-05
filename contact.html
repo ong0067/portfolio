@@ -1,0 +1,125 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+
+  <link rel="stylesheet"  href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="script.js"></script>
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            alert("Welcome to my contact page!");
+        });
+    </script>
+</head>
+
+<body>
+  <nav>
+  <div class="navbar">
+    <div class="logo"><a href="#">Portfolio.</a></div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <div class="cancel-btn">
+        <i class="fas fa-times "></i>
+      </div>
+    </ul>
+    
+    
+<div class="menu-btn">    
+      <i class="fas fa-bars"></i>
+</div>
+  </div>
+<button id="toggle-theme" style="margin-left:20px;">🌙</button>
+    </div>
+</nav>
+    
+<!--contact section start-->
+<section class="contact">
+
+    <div class="contact-content">
+        
+        <div class="contact-header">
+            <h1>Contact Me</h1>
+            <p>If you have any questions or would like to get in touch, please fill out the form below:</p>
+        </div>
+
+       <form id="contact-form" >
+            <div class="contact-name">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>  
+
+            <div class="contact-gmail">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="contact-phone">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9\-+\s()]*" placeholder="Optional">
+            </div>
+
+            <div class="contact-subject">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject of your message">
+            </div>
+
+            <div class="contact-message">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <div id="msg"></div>
+
+        <div class="contact-socials">
+            <div class="facebook-btn">
+                <a href="https://www.facebook.com/share/1DVywP5rp6/" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <div class="instagram-btn">
+                <a href="https://www.instagram.com/_sheng1011_?igsh=dHNuYWhib3Znands" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div class="whatsapp-btn">
+                <a href="https://wa.me/qr/YVDMRRH6SXFIN1" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="linkedin-btn">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="twitter-btn">
+                <a href="https://twitter.com/yourprofile" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <h3>Other ways to reach me:</h3>
+            <ul>
+                <li><i class="fas fa-envelope"></i> jiasheng0067@gmail.com</li>
+                <li><i class="fas fa-phone"></i> +60 0183863920</li>
+                <li><i class="fas fa-map-marker-alt"></i> Negeri Sembilan,Malaysia</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Jia Sheng. All rights reserved.</p>
+</footer>
+  
